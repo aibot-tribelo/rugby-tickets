@@ -33,21 +33,6 @@
     position: relative;
   }
 
-  /* Notch effect */
-  .ticket::before, .ticket::after {
-    content: '';
-    position: absolute;
-    width: 28px;
-    height: 28px;
-    background: #1a1a1a;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-  }
-  .ticket::before { left: calc(200px - 14px); }
-  .ticket::after { left: calc(200px - 14px); }
-
   .ticket-left {
     width: 200px;
     display: flex;
@@ -94,23 +79,23 @@
     border-left: 2px dashed rgba(255,255,255,0.2);
   }
 
-  /* TICKET 1 - England v France */
+  /* TICKET 1 - Kevin */
   .t1 { background: linear-gradient(135deg, #003366, #001a33); color: white; }
   .t1 .ticket-left { background: #c8102e; }
   .t1 .stub { background: #001222; }
 
-  /* TICKET 2 - VIP */
+  /* TICKET 2 - Dave */
   .t2 { background: linear-gradient(135deg, #1a1a1a, #2d2d2d); color: white; border: 1px solid #c9a84c; }
   .t2 .ticket-left { background: linear-gradient(135deg, #c9a84c, #a07830); color: #000; }
   .t2 .stub { background: #111; border-color: rgba(201,168,76,0.3); color: #c9a84c; }
 
-  /* TICKET 3 - Joke */
+  /* TICKET 3 - Alex */
   .t3 { background: #fff; color: #000; }
   .t3 .ticket-left { background: #003366; color: white; }
   .t3 .ticket-right { color: #000; }
-  .t3 .stub { background: #eee; color: #666; }
+  .t3 .stub { background: #eee; color: #666; border-color: #ccc; }
 
-  /* TICKET 4 - Premium */
+  /* TICKET 4 - Noel */
   .t4 { background: linear-gradient(135deg, #0a2e0a, #1a4a1a); color: white; }
   .t4 .ticket-left { background: #006400; }
   .t4 .stub { background: #051505; }
@@ -122,27 +107,7 @@
     line-height: 1.1;
   }
 
-  .vs-badge {
-    background: rgba(255,255,255,0.2);
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 900;
-    font-size: 0.7rem;
-  }
-
-  .team-flag {
-    font-size: 2rem;
-  }
-
-  .match-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  .team-flag { font-size: 2rem; }
 
   .competition {
     font-size: 0.6rem;
@@ -165,7 +130,6 @@
     margin-top: auto;
   }
 
-  .detail-block { }
   .detail-label {
     font-size: 0.55rem;
     text-transform: uppercase;
@@ -183,7 +147,6 @@
     background: rgba(255,255,255,0.1);
     border-radius: 6px;
     padding: 8px 12px;
-    display: inline-block;
   }
 
   .barcode {
@@ -223,30 +186,24 @@
     opacity: 0.5;
     font-style: italic;
   }
-
-  @media print {
-    body { background: white; padding: 10px; }
-    h1 { display: none; }
-    .ticket { box-shadow: none; }
-  }
 </style>
 </head>
 <body>
 
-<h1>🎫 Not real — please don't try 😂</h1>
+<h1>🎫 Joke tickets — not real, don't try it 😂</h1>
 
-<!-- TICKET 1: England vs France -->
+<!-- TICKET 1: KEVIN -->
 <div class="ticket t1">
   <div class="watermark">NOT REAL</div>
   <div class="ticket-left">
     <div class="team-flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
-    <div class="match-logo">ENG<br>v<br>FRA</div>
-    <div class="team-flag">🇫🇷</div>
+    <div class="match-logo">ENG<br>v<br>IRE</div>
+    <div class="team-flag">🇮🇪</div>
   </div>
   <div class="ticket-right">
     <div>
-      <div class="competition">Six Nations Championship 2026</div>
-      <div class="match-title">England v France</div>
+      <div class="competition">Guinness Six Nations Championship 2026</div>
+      <div class="match-title">England v Ireland</div>
       <div class="joke-text">Definitely official. Totally real. Trust us.</div>
     </div>
     <div class="match-details">
@@ -267,32 +224,32 @@
         <div class="detail-value">South Stand</div>
       </div>
       <div class="detail-block seat-block">
-        <div class="detail-label">Row / Seat</div>
-        <div class="detail-value">G / 14</div>
+        <div class="detail-label">Guest</div>
+        <div class="detail-value">KEVIN</div>
       </div>
       <div class="detail-block">
         <div class="barcode">
           <div style="height:100%"></div><div style="height:60%"></div><div style="height:80%"></div><div style="height:100%"></div><div style="height:40%"></div><div style="height:90%"></div><div style="height:70%"></div><div style="height:100%"></div><div style="height:60%"></div><div style="height:80%"></div><div style="height:50%"></div><div style="height:100%"></div><div style="height:75%"></div><div style="height:90%"></div><div style="height:100%"></div>
         </div>
-        <div class="ticket-num">TW26-EF-00142-A</div>
+        <div class="ticket-num">TW26-EI-00142-K</div>
       </div>
     </div>
   </div>
-  <div class="stub">🏉 Twickenham · Row G · Seat 14</div>
+  <div class="stub">🏉 South Stand · Kevin</div>
 </div>
 
-<!-- TICKET 2: VIP Gold -->
+<!-- TICKET 2: DAVE (VIP Gold) -->
 <div class="ticket t2">
   <div class="watermark">FAKE</div>
   <div class="ticket-left">
     <div class="team-flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
-    <div class="match-logo" style="color:#000;">ENG<br>v<br>FRA</div>
-    <div class="team-flag">🇫🇷</div>
+    <div class="match-logo" style="color:#000;">ENG<br>v<br>IRE</div>
+    <div class="team-flag">🇮🇪</div>
   </div>
   <div class="ticket-right">
     <div>
       <div class="competition" style="color:#c9a84c;">⭐ VIP HOSPITALITY · Six Nations 2026</div>
-      <div class="match-title">England v France</div>
+      <div class="match-title">England v Ireland</div>
       <div class="joke-text" style="color:rgba(255,255,255,0.4)">Includes complimentary prawn sandwiches & existential dread</div>
     </div>
     <div class="match-details">
@@ -314,31 +271,31 @@
       </div>
       <div class="detail-block seat-block" style="background:rgba(201,168,76,0.15);">
         <div class="detail-label">Guest</div>
-        <div class="detail-value">NOEL</div>
+        <div class="detail-value">DAVE</div>
       </div>
       <div class="detail-block">
         <div class="barcode" style="color:#c9a84c;">
           <div style="height:100%"></div><div style="height:70%"></div><div style="height:90%"></div><div style="height:50%"></div><div style="height:100%"></div><div style="height:60%"></div><div style="height:80%"></div><div style="height:100%"></div><div style="height:55%"></div><div style="height:85%"></div><div style="height:70%"></div><div style="height:100%"></div><div style="height:65%"></div><div style="height:90%"></div><div style="height:100%"></div>
         </div>
-        <div class="ticket-num" style="color:#c9a84c;">VIP-TW26-RB-00001</div>
+        <div class="ticket-num" style="color:#c9a84c;">VIP-TW26-RB-00002-D</div>
       </div>
     </div>
   </div>
-  <div class="stub" style="color:#c9a84c;">⭐ VIP · Royal Box · Noel</div>
+  <div class="stub" style="color:#c9a84c;">⭐ Royal Box · Dave</div>
 </div>
 
-<!-- TICKET 3: Joke one -->
+<!-- TICKET 3: ALEX -->
 <div class="ticket t3">
   <div class="watermark" style="color:#000;">JOKE</div>
   <div class="ticket-left">
     <div class="team-flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
-    <div class="match-logo" style="color:#fff;">ENG<br>v<br>FRA</div>
-    <div class="team-flag">🇫🇷</div>
+    <div class="match-logo" style="color:#fff;">ENG<br>v<br>IRE</div>
+    <div class="team-flag">🇮🇪</div>
   </div>
   <div class="ticket-right" style="color:#000;">
     <div>
-      <div class="competition" style="color:#666;">Six Nations 2026 · Twickenham Stadium</div>
-      <div class="match-title" style="color:#000;">England v France</div>
+      <div class="competition" style="color:#666;">Guinness Six Nations 2026 · Twickenham Stadium</div>
+      <div class="match-title" style="color:#000;">England v Ireland</div>
       <div class="joke-text" style="color:#999;">⚠️ Not valid for entry · For novelty use only · May cause embarrassment</div>
     </div>
     <div class="match-details">
@@ -359,32 +316,32 @@
         <div class="detail-value" style="color:#000;">North Stand</div>
       </div>
       <div class="detail-block seat-block" style="background:#f0f0f0;">
-        <div class="detail-label" style="color:#666;">Row / Seat</div>
-        <div class="detail-value" style="color:#000;">A / 1</div>
+        <div class="detail-label" style="color:#666;">Guest</div>
+        <div class="detail-value" style="color:#000;">ALEX</div>
       </div>
       <div class="detail-block">
         <div class="barcode" style="color:#000;">
           <div style="height:100%"></div><div style="height:50%"></div><div style="height:75%"></div><div style="height:100%"></div><div style="height:60%"></div><div style="height:90%"></div><div style="height:80%"></div><div style="height:100%"></div><div style="height:45%"></div><div style="height:70%"></div><div style="height:95%"></div><div style="height:100%"></div><div style="height:55%"></div><div style="height:85%"></div><div style="height:100%"></div>
         </div>
-        <div class="ticket-num" style="color:#999;">FAKE-TW26-HA-00000</div>
+        <div class="ticket-num" style="color:#999;">TW26-EI-00069-A</div>
       </div>
     </div>
   </div>
-  <div class="stub" style="color:#666; background:#e8e8e8;">🚫 Not Real · Seat A1</div>
+  <div class="stub" style="color:#666; background:#e8e8e8; border-color:#ccc;">🏉 North Stand · Alex</div>
 </div>
 
-<!-- TICKET 4: Noel's Ticket -->
+<!-- TICKET 4: NOEL -->
 <div class="ticket t4">
   <div class="watermark">ENZO</div>
   <div class="ticket-left">
     <div class="team-flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
-    <div class="match-logo">ENG<br>v<br>FRA</div>
-    <div class="team-flag">🇫🇷</div>
+    <div class="match-logo">ENG<br>v<br>IRE</div>
+    <div class="team-flag">🇮🇪</div>
   </div>
   <div class="ticket-right">
     <div>
-      <div class="competition">Six Nations 2026 · Twickenham · Made by Enzo ⚙️</div>
-      <div class="match-title">England v France</div>
+      <div class="competition">Guinness Six Nations 2026 · Twickenham · Made by Enzo ⚙️</div>
+      <div class="match-title">England v Ireland</div>
       <div class="joke-text">Hand-crafted by your AI assistant. Priceless.</div>
     </div>
     <div class="match-details">
@@ -406,17 +363,17 @@
       </div>
       <div class="detail-block seat-block">
         <div class="detail-label">Guest</div>
-        <div class="detail-value">NOEL + 3</div>
+        <div class="detail-value">NOEL</div>
       </div>
       <div class="detail-block">
         <div class="barcode">
           <div style="height:100%"></div><div style="height:65%"></div><div style="height:85%"></div><div style="height:100%"></div><div style="height:55%"></div><div style="height:75%"></div><div style="height:90%"></div><div style="height:100%"></div><div style="height:60%"></div><div style="height:80%"></div><div style="height:45%"></div><div style="height:100%"></div><div style="height:70%"></div><div style="height:95%"></div><div style="height:100%"></div>
         </div>
-        <div class="ticket-num">ENZO-TW26-N4-00420</div>
+        <div class="ticket-num">ENZO-TW26-EI-00420-N</div>
       </div>
     </div>
   </div>
-  <div class="stub">🏉 East Stand · NOEL +3</div>
+  <div class="stub">🏉 East Stand · Noel</div>
 </div>
 
 </body>
